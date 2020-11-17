@@ -1,4 +1,5 @@
 #ig bot
+#compatible with Google Chrome browser
 #runs a script to like and follow on 
 # post found via a hashtag, runs with credentials.py where username and password is required
 
@@ -44,7 +45,7 @@ class InstagramBot:
        
        
     #         ig.get_photos(tag)
-    #this defines the script that navigates to the hashtags(please see bottom for list of hashtags)
+    #this defines the script that navigates to the hashtags(please see bottom for list of hashtags, line 133)
     def get_photos(self, hashtag):
         driver = self.driver
         driver.get("https://www.instagram.com/explore/tags/" + hashtag + "/")
@@ -84,6 +85,7 @@ class InstagramBot:
                     .click()
 
                 time.sleep(2)
+               #Message option could initiate here
 
             # Comment
 
@@ -126,7 +128,9 @@ if __name__ == "__main__":
     
 
     ig = InstagramBot(username, pw)
+    
    
+   #list of hashtags, code can be ran with minimun one hastag to test that it works
     hashtag = ['accessories', 'fashionable', 'fashionaddict', 'fashiondiaries','fashiongram','instastyle',
                 'jewelry', 'trendy', 'trend', 'instaFashion', 'Fashionista', 'ootd']
 
